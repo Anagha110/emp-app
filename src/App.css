@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.table{
+  border: 2px solid black;
+  margin-top: 20px;
+  background-color:lightcyan;
+}
+footer{
+  /* margin-top: 500px; */
+  background-color:grey;
+  height: 60px;
+  position: relative;
+}
+.container{
+  margin-top: 50px;
+}

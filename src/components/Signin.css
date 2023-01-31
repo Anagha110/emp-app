@@ -1,0 +1,10 @@
+.loginform{
+    margin-top: 50px;
+    background-color: lightcyan;
+    border: 1px solid red;
+    width:80%;
+    height: 25em; 
+    padding: 30px;
+    margin-right: 20px;
+
+}
