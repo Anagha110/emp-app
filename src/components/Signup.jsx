@@ -21,24 +21,13 @@ const userAuthentication = ()=>{
 
   }
     // e.preventDefault();
-axios.post(`/api/signup/`,
+axios.post(`http://localhost:3004/api/signup/`,
 {name,email,password}
 ).then(()=>{
 navigate("/");
 })
   }
-//   axios.post(`http://localhost:8082/login/`,
-//   userData
-//   ).then((getData)=>{
-//    if(getData.data)
-//    {
-// navigate('/read');
-//    }
-//    else
-//    {
-//     alert("Invalid user");
-//    }
-//    })
+
   
  
 

@@ -9,7 +9,7 @@ import logo from "./logo.png"
 const Read = () => {
     const [APIData, setAPIData] = useState([]);
     useEffect(() => {
-      axios.get(`/api/employeelist`)
+      axios.get(`http://localhost:3004/api/employeelist`)
               .then((response) => {
                 console.log(response.data)
                   setAPIData(response.data);
@@ -28,13 +28,13 @@ const Read = () => {
       
       }
       const onDelete = (_id) => {
-        axios.delete(`/api/employeelist/${_id}`)
+        axios.delete(`http://localhost:3004/api/employeelist/${_id}`)
         .then(() => {
             getData();
         })
       }
       const getData = () => {
-        axios.get("/api/employeelist")
+        axios.get("http://localhost:3004/api/employeelist")
             .then((getData) => {
                  setAPIData(getData.data);
              })

@@ -16,12 +16,12 @@ const Update = () => {
     const [position,setPosition]=useState("");
     const [salary,setSalary]=useState("");
     const [ID,setID]=useState(null);
-    const sendDataToAPI=(e)=>{
-       e.preventDefault();
-axios.post("/api/employeelist",
-{name, location, position, salary}
+    const updateAPIData = () => {
+
+      axios.put(`http://localhost:3004/api/employeelist`, {
+        name, location, position, salary}
 ).then(()=>{
-  navigate("/Read", { replace: true });
+  navigate("/Read",{ replace: true });
   
 })
     }
@@ -33,12 +33,12 @@ axios.post("/api/employeelist",
         setSalary(localStorage.getItem('Salary'));
         }, []);
 
-const updateAPIData = () => {
-            axios.put(`/api/employeelist`, {
-                name, location, position, salary
-            })
+
            
-        }
+                
+          
+           
+      
 
 
   return (
@@ -94,7 +94,7 @@ const updateAPIData = () => {
 
                     
                  
-                    <button onClick={sendDataToAPI} type="button" className="btn btn-secondary btn-lg ms-2">Update</button>
+                    <button onClick={updateAPIData } type="button" className="btn btn-secondary btn-lg ms-2">Update</button>
                     
 
    </div> 
